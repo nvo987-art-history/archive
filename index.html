@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NVO987 Archive | Digital Preservation & Internet Archive Collection</title>
+
+<meta name="description" content="NVO987 Archive is dedicated to digital preservation, scholarly publications, cultural heritage resources and Internet Archive collections.">
+
+<meta name="keywords" content="Internet Archive, Digital Preservation, Archive.org, Scholarly Publications, Cultural Heritage, SHA256, Digital Archive, NVO987">
+
+<meta name="author" content="NVO987">
+<meta name="robots" content="index,follow">
+
+<link rel="canonical" href="https://archive.nvo987.us">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="NVO987 Archive">
+<meta property="og:description" content="Digital preservation, scholarly publications and Internet Archive archival resources.">
+<meta property="og:url" content="https://archive.nvo987.us">
+<meta property="og:site_name" content="NVO987 Archive">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="NVO987 Archive">
+<meta name="twitter:description" content="Digital preservation and Internet Archive archival resources.">
+
+<link rel="icon" href="/favicon.ico">
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"NVO987 Archive",
+  "url":"https://archive.nvo987.us",
+  "description":"Digital preservation and archival resources."
+}
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --gold:#d4af37;
+    --gold-light:#f7df7a;
+    --gold-dark:#8a6610;
+    --black:#050505;
+    --black-soft:#0c0c0c;
+    --panel:#111111;
+    --text:#f3f3f3;
+    --muted:#bdbdbd;
+    --border:rgba(212,175,55,.18);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+    width:100%;
+    max-width:100%;
+    overflow-x:hidden;
+}
+
+body{
+    background:
+    radial-gradient(circle at top,
+    rgba(212,175,55,.08),
+    transparent 30%),
+    linear-gradient(
+    180deg,
+    #0b0b0b 0%,
+    #050505 100%);
+
+    color:var(--text);
+    font-family:'Cormorant Garamond',serif;
+    min-height:100vh;
+}
+
+body::before{
+    content:'';
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+
+    background:
+    linear-gradient(
+    rgba(255,255,255,.015) 1px,
+    transparent 1px);
+
+    background-size:100% 4px;
+    opacity:.15;
+}
+
+.hero{
+    position:relative;
+    text-align:center;
+    padding:140px 25px 110px;
+}
+
+.logo{
+    position:relative;
+
+    font-family:'Playfair Display',serif;
+    font-size:clamp(5rem,10vw,8rem);
+    font-weight:700;
+    letter-spacing:.18em;
+
+    display:inline-block;
+
+    background:
+    linear-gradient(
+    180deg,
+    #fff9da 0%,
+    #f7df7a 25%,
+    #d4af37 55%,
+    #8a6610 100%);
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    text-shadow:
+    0 0 40px rgba(212,175,55,.25);
+}
+
+.logo::after{
+    content:'NVO987';
+
+    position:absolute;
+    inset:0;
+
+    z-index:-1;
+
+    color:rgba(212,175,55,.12);
+
+    filter:blur(18px);
+
+    transform:translateY(8px);
+}
+
+.subtitle{
+    margin-top:25px;
+
+    color:var(--gold);
+
+    font-size:.95rem;
+
+    letter-spacing:.45em;
+
+    text-transform:uppercase;
+
+    opacity:.9;
+}
+
+.tagline{
+    max-width:1000px;
+
+    margin:55px auto 0;
+
+    font-size:1.7rem;
+
+    line-height:1.8;
+
+    color:#dddddd;
+}
+
+.section{
+    width:min(92%,1400px);
+
+    margin:auto;
+
+    padding:90px 0;
+}
+
+.section-title{
+    text-align:center;
+
+    margin-bottom:70px;
+
+    font-size:3.5rem;
+
+    font-family:'Playfair Display',serif;
+
+    background:
+    linear-gradient(
+    180deg,
+    #fff8d0,
+    var(--gold));
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(320px,1fr));
+
+    gap:32px;
+}
+
+.card{
+    position:relative;
+
+    background:
+    linear-gradient(
+    180deg,
+    rgba(255,255,255,.03),
+    rgba(255,255,255,.01));
+
+    border:1px solid var(--border);
+
+    border-radius:28px;
+
+    padding:40px;
+
+    overflow:hidden;
+
+    transition:.35s ease;
+}
+
+.card::before{
+    content:'';
+
+    position:absolute;
+
+    left:0;
+    top:0;
+
+    width:100%;
+    height:1px;
+
+    background:
+    linear-gradient(
+    90deg,
+    transparent,
+    rgba(212,175,55,.8),
+    transparent);
+}
+
+.card:hover{
+    transform:translateY(-8px);
+
+    border-color:rgba(212,175,55,.35);
+
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.45),
+    0 0 35px rgba(212,175,55,.10);
+}
+
+.card h3{
+    font-size:2.1rem;
+
+    margin-bottom:18px;
+
+    color:#fff7d0;
+}
+
+.card p{
+    font-size:1.3rem;
+
+    line-height:1.8;
+
+    color:#d2d2d2;
+}
+.archive-links{
+    text-align:center;
+    margin-top:60px;
+}
+
+.archive-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    min-height:62px;
+
+    padding:18px 34px;
+
+    margin:10px;
+
+    border-radius:18px;
+
+    text-decoration:none;
+
+    color:white;
+
+    font-size:1.05rem;
+
+    border:1px solid rgba(212,175,55,.28);
+
+    background:
+    linear-gradient(
+    180deg,
+    rgba(212,175,55,.18),
+    rgba(212,175,55,.06));
+
+    transition:.3s ease;
+}
+
+.archive-btn:hover{
+    transform:translateY(-4px);
+
+    border-color:rgba(212,175,55,.6);
+
+    box-shadow:
+    0 15px 35px rgba(212,175,55,.15);
+}
+
+.feature{
+    margin-top:100px;
+
+    padding:80px 50px;
+
+    border-radius:32px;
+
+    text-align:center;
+
+    border:1px solid var(--border);
+
+    background:
+    linear-gradient(
+    180deg,
+    rgba(212,175,55,.06),
+    rgba(255,255,255,.015));
+}
+
+.feature h2{
+    font-size:4.5rem;
+
+    margin-bottom:30px;
+
+    font-family:'Playfair Display',serif;
+
+    background:
+    linear-gradient(
+    180deg,
+    #fff9db,
+    var(--gold));
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.feature p{
+    max-width:1000px;
+
+    margin:auto;
+
+    font-size:1.45rem;
+
+    line-height:1.9;
+
+    color:#dadada;
+}
+
+.archive-link{
+    color:var(--gold-light);
+
+    text-decoration:none;
+
+    overflow-wrap:anywhere;
+    word-break:break-word;
+}
+
+.archive-link:hover{
+    color:white;
+}
+
+.feature strong{
+    color:#fff5c2;
+
+    font-size:1.15em;
+}
+
+.feature span{
+    display:block;
+
+    margin-top:10px;
+
+    padding:18px;
+
+    border-radius:16px;
+
+    background:
+    rgba(255,255,255,.03);
+
+    border:
+    1px solid rgba(212,175,55,.15);
+
+    overflow-wrap:anywhere;
+    word-break:break-word;
+
+    font-family:monospace;
+
+    font-size:.95rem;
+
+    color:#e7d08c;
+}
+
+footer{
+    margin-top:140px;
+
+    padding:50px 20px;
+
+    text-align:center;
+
+    border-top:
+    1px solid rgba(212,175,55,.12);
+}
+
+.footer-brand{
+    color:var(--gold);
+
+    font-size:1.2rem;
+
+    letter-spacing:.45em;
+
+    text-transform:uppercase;
+}
+
+.footer-copy{
+    margin-top:15px;
+
+    color:#8f8f8f;
+
+    font-size:1rem;
+}
+
+@media(max-width:900px){
+
+    .subtitle{
+        letter-spacing:.18em;
+        line-height:1.8;
+    }
+
+    .tagline{
+        font-size:1.35rem;
+    }
+
+    .section-title{
+        font-size:2.5rem;
+    }
+
+    .feature h2{
+        font-size:3rem;
+    }
+
+    .feature{
+        padding:45px 25px;
+    }
+
+    .feature p{
+        font-size:1.25rem;
+    }
+
+    .card{
+        padding:30px;
+    }
+
+    .card h3{
+        font-size:1.8rem;
+    }
+
+    .card p{
+        font-size:1.15rem;
+    }
+
+    .archive-btn{
+        display:flex;
+        width:100%;
+        margin:12px auto;
+    }
+
+    .footer-brand{
+        letter-spacing:.2em;
+    }
+}
+
+@media(max-width:600px){
+
+    .hero{
+        padding:90px 20px 60px;
+    }
+
+    .logo{
+        font-size:4rem;
+        letter-spacing:.08em;
+    }
+
+    .tagline{
+        font-size:1.2rem;
+    }
+
+    .section{
+        width:94%;
+    }
+
+    .section-title{
+        font-size:2.1rem;
+    }
+
+    .feature h2{
+        font-size:2.3rem;
+    }
+
+    .feature p{
+        font-size:1.15rem;
+    }
+}
+
+
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+
+<h1 class="logo">NVO987</h1>
+
+<div class="subtitle">
+DIGITAL ARCHIVE · INTERNET ARCHIVE · CULTURAL PRESERVATION
+</div>
+
+<p class="tagline">
+NVO987 Archive is dedicated to the long-term preservation of scholarly
+publications, cultural resources and historical digital materials.
+Through trusted archival platforms, research works remain accessible,
+verifiable and preserved for future generations.
+</p>
+
+</section>
+
+<section class="section">
+
+<h2 class="section-title">
+Digital Preservation Initiative
+</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Internet Archive Collection</h3>
+<p>
+Public archival collection maintained through Internet Archive,
+providing permanent access to preserved publications and digital resources.
+</p>
+</div>
+
+<div class="card">
+<h3>Archived Publication</h3>
+<p>
+Color as a Generative Principle in the Work of Sonia Delaunay,
+preserved as part of the NVO987 digital preservation initiative.
+</p>
+</div>
+
+<div class="card">
+<h3>Integrity Verification</h3>
+<p>
+Cryptographic verification information supporting authenticity
+and integrity validation of archived digital objects.
+</p>
+</div>
+
+<div class="card">
+<h3>Research Accessibility</h3>
+<p>
+Supporting long-term scholarly access, cultural preservation
+and digital heritage initiatives through open archival systems.
+</p>
+</div>
+
+</div>
+
+<div class="archive-links">
+
+<a class="archive-btn"
+href="https://archive.org/details/@nicholas_van-orton"
+target="_blank">
+View Internet Archive Profile
+</a>
+
+<a class="archive-btn"
+href="https://archive.org/details/v-9-1-color-as-a-generative-principle-in-the-work-of-sonia-delaunay/mode/1up"
+target="_blank">
+View Archived Publication
+</a>
+
+</div>
+
+<div class="feature">
+
+<h2>NVO987 DIGITAL ARCHIVE</h2>
+
+<p>
+This archive serves as a repository for preserved publications,
+research materials and cultural documentation. Through Internet Archive,
+digital works remain publicly accessible for future research, education,
+citation and cultural heritage preservation.
+</p>
+
+<br><br>
+
+<p>
+<strong>Internet Archive Profile</strong><br>
+<a class="archive-link"
+href="https://archive.org/details/@nicholas_van-orton"
+target="_blank">
+archive.org/details/@nicholas_van-orton
+</a>
+</p>
+
+<br>
+
+<p>
+<strong>Archived Publication</strong><br>
+<a class="archive-link"
+href="https://archive.org/details/v-9-1-color-as-a-generative-principle-in-the-work-of-sonia-delaunay/mode/1up"
+target="_blank">
+Color as a Generative Principle in the Work of Sonia Delaunay
+</a>
+</p>
+
+<br>
+
+<p>
+<strong>SHA-256</strong><br>
+<span>
+be94c5740ed3683390efbaaadc11fac94d3c46e217d0913470082ac1207d8a93
+</span>
+</p>
+
+</div>
+
+</section>
+
+<footer>
+
+<div class="footer-brand">
+NVO987 ARCHIVE
+</div>
+
+<div class="footer-copy">
+© 2026 NVO987 Archive · Digital Preservation Initiative
+</div>
+
+</footer>
+
+</body>
+</html>
